@@ -1,0 +1,40 @@
+# Protected Version - Apache Configuration
+
+# Force HTTPS (uncomment if you have SSL certificate)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Disable directory listing
+Options -Indexes
+
+# Protect against directory traversal
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# PHP Settings (if allowed by hosting)
+<IfModule mod_php7.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|log|md|git|gitignore)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

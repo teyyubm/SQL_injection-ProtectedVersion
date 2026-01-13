@@ -1,0 +1,15 @@
+# Protect lib/ directory - allow POST requests (form submissions) but block GET
+# PHP includes work because they're server-side and don't go through .htaccess
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Allow POST requests (form submissions) - let them through
+    RewriteCond %{REQUEST_METHOD} ^POST$ [NC]
+    RewriteRule ^.*$ - [L]
+    
+    # Block GET requests to PHP files (direct URL access)
+    RewriteCond %{REQUEST_METHOD} !^POST$ [NC]
+    RewriteCond %{REQUEST_URI} \.php$ [NC]
+    RewriteRule ^.*$ - [F,L]
+</IfModule>

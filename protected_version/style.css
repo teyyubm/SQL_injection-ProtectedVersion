@@ -1,0 +1,593 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+header{
+    padding: 50px 0;
+    z-index: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    background:#000000
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,14,1,1) 35%);
+    width: 100%;
+    overflow-x: hidden;
+}
+header .logo{
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav{
+    float: right;
+    width: 50%;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li{
+    display: inline-block;
+}
+header nav ul li a{
+    color: #fff;
+}
+header nav ul li.active a::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #DC7000;
+    border-radius: 10px;
+    position: relative;
+    top: 2px;
+    left: -15px;
+
+}
+header nav ul li:not(.active):not(.btn) a:hover{
+    border-bottom: 5px solid #DC7000;
+}
+header nav ul li.btn a {
+    background: #FA9021;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover{
+    background: #661608;
+}
+header nav ul li a.black  {
+    color: black;
+    font-weight: 400px;
+}
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+
+}
+
+.hero .info{
+    width: 530px;
+    padding-top: 70px;
+    
+
+}
+.hero .info h1{
+    color: #E87D0E;
+    font-size: 20px;
+    font-weight: 600px;
+}
+.hero .info h2{
+    
+    font-size: 50px;
+    font-weight: 600px;
+}
+.hero .info p{
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+   
+}
+.hero .info .btn{
+    background: #FA9021;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500 ease;
+    font-size: 18px;
+}
+.hero .info .btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+.hero .controller{
+    position: absolute;
+    top: -150px;
+    right: -35px;
+    height: 800px;
+
+}
+
+header nav ul {
+    position: relative;
+    z-index: 2;
+}
+.trending {
+    padding: 50px;
+}
+.trending .blocks{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+/* For trending.php - allows wrapping with max 4 per row */
+.trending .blocks-all{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.trending .blocks-all .block{
+    flex: 0 0 calc((100% - 60px) / 4);
+    width: calc((100% - 60px) / 4);
+    max-width: calc((100% - 60px) / 4);
+}
+
+.trending .block{
+    flex: 1;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.trending .block a{
+    display: block;
+    text-decoration: none;
+}
+
+.trending .block img{
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+.trending .block p{
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.see_all:hover{
+    transform: scale(1.1);
+}
+.trending .block a p{
+    color: #fff;
+}
+.trending .block a:hover p{
+    transition: all 500 ease;
+    color: #0037dc;
+}
+.see_all{
+    color: #fff;
+    background: #25211D;
+    border-radius: 5px;
+    padding: 12px 17px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+h3{
+    text-align: center;
+    font-size: 27px;
+    padding: 50px 0;
+}
+h4{
+    font-size: 20px;
+    padding: 50px 0;
+}
+.post p{
+    font-size: 14px;
+    color: rgb(199, 199, 199);
+    line-height: 170%;
+}
+
+.poster{
+    padding: 50px 0;
+    border-radius: 51px;
+}
+.features {
+    background: url(imgs/features/Rectangle\ 5.png) no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.features h3, .features p{
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3{
+    font-size: 30px;
+}
+
+.features .info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.features .info .block{
+    
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+
+.features .info .block img{
+    margin-bottom: 15px;
+}
+
+.projects{
+    padding: 50px 0;
+    margin-top: -100px;
+}
+
+.projects h3{
+    font-size: 30px;
+    text-align: center;
+}
+.projects p{
+    margin: 40px 0;
+    text-align: center;
+}
+.projects .images{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.projects .see_all{
+    float: none;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.email{
+    padding-bottom: 100px;
+    margin-top: -100px;
+}
+.email h3{
+    margin-top: 50px;
+    text-align: left;
+    font-size: 30px;
+    
+
+}
+.email .block{
+    background: #1C140F;
+    border-radius: 10px;
+    padding: 10px 3%;
+    width: 94%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.email .block h4{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: -30px;
+}
+
+.email .block p{
+    width: 500px;
+    margin-top: -20px;
+}
+
+.email .block input{
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 350px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+    right: -97px;
+    z-index: 3;
+    padding-right: 110px;
+    
+}
+
+.email .block input::placeholder{
+    color: #898989;
+}
+
+.email .block button{
+    background: #FA9021;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    cursor: pointer;
+    border: 0;
+    padding: 13px 17px;
+    position: relative;
+    z-index: 4;
+    color: #fff;
+}
+
+.email .block button:hover{
+    background: #661608;
+}
+
+.hero_about{
+    position: relative;
+}
+.hero_about img{
+    position: absolute;
+    right: -150px;
+    top: 0;
+}
+.hero_about .info{
+    width: 500px;
+    padding: 250px 0;
+}
+.hero_about .info h1{
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.hero_about .info button{
+    background: #FA9021;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500 ease;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.hero_about .info button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.work{
+    padding: 80px 0;
+}
+.work h2{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.work .blocks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.work .blocks .block{
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+    background: #1C140F;
+}
+.work .blocks .block h3{
+    text-align: left;
+    padding: 0;
+    font-size: 20px;
+    margin: 20px 0;
+}
+ 
+.work .blocks .block .badge{
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+.work .blocks .block .badge.purple{
+    background: #B000DC;
+}
+
+.work .blocks .block .badge.brown{
+    background: #DC4200;
+}
+.work .blocks .block .badge.green{
+    background: #00DC8D;
+}
+
+
+.hero_contacts h1{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-size: 33px;
+}
+.hero_contacts p{
+    text-align: center;
+    
+}
+.hero_contacts img{
+    width: 70%;
+    margin: 80px 15%;
+}
+
+.feedback{
+    padding: 70px 0;
+    background: #1C140F;
+}
+.feedback h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+.feedback p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.feedback form{
+    margin: 80px auto;
+    width: 600px;
+}
+
+.feedback form .inline{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback form .inline > div{
+    width: 50%;
+}
+
+.feedback form label {
+    color: #4f4f4f;
+    font-size: 14px;
+     
+}
+
+.feedback form input,
+.feedback form textarea{
+    background: #2C2420;
+    border-radius: 10px;
+    border: 0.6px solid #CECECE;
+    display: block;
+    width: 90%;
+    padding: 15px 10px;
+    outline: none;
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 20px;
+
+}
+
+
+.feedback form .one_line{
+    width: 96%;
+}
+
+.feedback form textarea{
+    resize: none;
+    height: 200px;
+}
+
+.feedback form button{
+    background: #DC7000;
+    border-radius:  5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+
+.feedback form button:hover{
+    background: #b01414;
+}
+
+.scroll{
+    color: #fff;
+    background: #25211D;
+    border-radius: 5px;
+    padding: 12px 17px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+
+/* FOOTER */
+footer{
+    background: black;
+    padding: 40px 0;
+
+}
+
+footer .blocks{
+    display: flex;
+    justify-content: space-between;
+}
+.logo2{
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    
+}
+footer .blocks p{
+    width: 300px;
+    padding: 15px 0;
+}
+footer .blocks h4{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+footer .blocks ul{
+    list-style: none;
+    margin-top: -30px;
+}
+
+footer .blocks ul li{
+    margin-top: 7px;
+    opacity: 0.8;
+    
+}
+
+footer .log{
+    margin-top: 50px;
+}
+footer hr{
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+
+footer >p{
+    text-align: center;
+}
+
+.log_out{
+    padding: 0 100px;
+    background: #000000;
+}
+#log_out{
+    color: #ccc;
+}
