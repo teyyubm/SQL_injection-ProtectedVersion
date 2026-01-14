@@ -459,7 +459,7 @@ $query->execute([$id]);
 
 ## License
 
-This project is created for educational purposes as part of the Software Optimization course at EU University of Applied Science, Winter 2025/26.
+This project is created for educational purposes as part of the Software Optimization course at UE University of Applied Science, Winter 2025/26.
 
 ---
 
